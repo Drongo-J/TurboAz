@@ -9,7 +9,10 @@ using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace ADO.NET_Task9.Domain.ViewModels
 {
@@ -276,9 +279,9 @@ namespace ADO.NET_Task9.Domain.ViewModels
         #endregion
 
         #region Cars
-        private ObservableCollection<CarUC> cars = new ObservableCollection<CarUC>();
+        private ObservableCollection<UIElement> cars = new ObservableCollection<UIElement>();
 
-        public ObservableCollection<CarUC> Cars
+        public ObservableCollection<UIElement> Cars
         {
             get { return cars; }
             set { cars = value; OnPropertyChanged(); }
@@ -289,25 +292,73 @@ namespace ADO.NET_Task9.Domain.ViewModels
 
         public HomePageUCViewModel()
         {
-            CarDealersCommand = new RelayCommand((c) => 
+            CarDealersCommand = new RelayCommand((c) =>
             {
                 Process.Start("https://turbo.az/avtosalonlar/avtosalon-rh");
             });
 
             ShowCommand = new RelayCommand((s) =>
             {
-            var cars = App.Database.Cars.ToList();
+                var cars = App.Database.Cars.ToList();
 
-            if (SelectedBrand != Constants.AllBrands)
-                cars = cars.Where(c => c.Brand == SelectedBrand).ToList();
+                if (SelectedBrand != Constants.AllBrands)
+                    cars = cars.Where(c => c.Brand == SelectedBrand).ToList();
+
+                if (SelectedType != Constants.AllCarTypes)
+                    cars = cars.Where(c => c.Type == SelectedType).ToList();
+
+                if (SelectedDateType != Constants.DateTypeAll)
+                {
+                    if (SelectedDateType == Constants.DateTypeOld)
+                        cars = cars.Where(c => c.IsNew == false).ToList();
+                    else
+                        cars = cars.Where(c => c.IsNew).ToList();
+                }
+
+                if (SelectedColor != Constants.AllColors)
+                    cars = cars.Where(c => c.Color == SelectedColor).ToList();
+                
+                if (SelectedFuelType != Constants.AllFuelTypes)
+                    cars = cars.Where(c => c.FuelType == SelectedFuelType).ToList();
+
+                if (SelectedMinimumPrice != Constants.NoPrice)
+                    cars = cars.Where(c => c.Price >= int.Parse(SelectedMinimumPrice.Replace(Constants.DollarSign,String.Empty).Trim())).ToList();
+
+                if (SelectedMaximumPrice != Constants.NoPrice)
+                    cars = cars.Where(c => c.Price <= int.Parse(SelectedMaximumPrice.Replace(Constants.DollarSign, String.Empty).Trim())).ToList();
+
+                if (SelectedMinimumMileage != Constants.NoMileage)
+                    cars = cars.Where(c => c.Mileage >= int.Parse(SelectedMinimumMileage.Replace(Constants.Kilometer, String.Empty).Trim())).ToList();
+
+                if (SelectedMaximumMileage != Constants.NoMileage)
+                    cars = cars.Where(c => c.Mileage <= int.Parse(SelectedMaximumMileage.Replace(Constants.Kilometer, String.Empty).Trim())).ToList();
+
+                if (SelectedMinimumYear != Constants.NoYear)
+                    cars = cars.Where(c => c.Year >= int.Parse(SelectedMinimumYear)).ToList();
+
+                if (SelectedMaximumYear != Constants.NoYear)
+                    cars = cars.Where(c => c.Year <= int.Parse(SelectedMaximumYear)).ToList();
 
                 Cars.Clear();
+                Thread.Sleep(500);
                 foreach (var item in cars)
                 {
                     var carUC = new CarUC();
                     var carUCVM = new CarUCViewModel(item);
                     carUC.DataContext = carUCVM;
+
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(item.ImagePath, UriKind.RelativeOrAbsolute);
+                    bitmap.EndInit();
+                    carUC.Image.Source = bitmap;
+
                     Cars.Add(carUC);
+                }
+
+                if (Cars.Count == 0)
+                {
+                    Cars.Add(new NoResultUC());
                 }
             });
             // Brands

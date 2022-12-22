@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;   
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,8 @@ namespace ADO.NET_Task9.Domain.Helpers
     {
         public const string AllBrands = "All Brands";
         public const string AllCarTypes = "All Types";
-        public const string DateTypeOld = "New";
-        public const string DateTypeNew = "Old";
+        public const string DateTypeOld = "Old";
+        public const string DateTypeNew = "New";
         public const string DateTypeAll = "All Date Types";
         public const string AllColors = "All Colors";
         public const string AllFuelTypes = "All Fuels Types";

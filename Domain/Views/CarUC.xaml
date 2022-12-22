@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ADO.NET_Task9.Domain.Views"
              mc:Ignorable="d" 
              d:DesignHeight="240"
-             Height="240"
+             Height="300"
              Width="320"
              Margin="20,10,20,0"
              d:DesignWidth="320"
@@ -24,7 +24,7 @@
                                 <DropShadowEffect Color="Black"  Opacity="0.5" BlurRadius="2" RenderingBias="Performance"/>
                             </Setter.Value>
                         </Setter>
-                    </Trigger>
+                    </Trigger>  
                 </Style.Triggers>
             </Style>
         </Border.Style>
@@ -35,10 +35,13 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Source="{Binding ImageSource}">
+                <Image Source="{Binding ImageSource,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       x:Name="Image">
                     
                 </Image>
             </Grid>
@@ -58,7 +61,21 @@
             </Grid>
 
             <Grid Grid.Row="3">
-                <TextBlock Text="{Binding CarDetails}"
+                <TextBlock Text="{Binding CarDetails2}"
+                           FontSize="18"
+                           FontFamily="Cascadia Code SemiLight}">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <TextBlock Text="{Binding CarDetails1}"
+                           FontSize="18"
+                           FontFamily="Cascadia Code SemiLight}">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <TextBlock Text="{Binding CarDetails3}"
                            FontSize="18"
                            FontFamily="Cascadia Code SemiLight}">
                 </TextBlock>
@@ -66,3 +83,4 @@
         </Grid>
     </Border>
 </UserControl>
+    

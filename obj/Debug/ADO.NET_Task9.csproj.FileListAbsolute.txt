@@ -26,3 +26,32 @@ C:\Users\Hafiz\source\repos\ADO.NET_Task9\obj\Debug\Domain\Views\HomePageUC.baml
 C:\Users\Hafiz\source\repos\ADO.NET_Task9\obj\Debug\Domain\Views\CarUC.g.cs
 C:\Users\Hafiz\source\repos\ADO.NET_Task9\obj\Debug\Domain\Views\CarUC.baml
 C:\Users\Hafiz\source\repos\ADO.NET_Task9\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\ADO.NET_Task9.exe.config
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\ADO.NET_Task9.exe
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\ADO.NET_Task9.pdb
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\EntityFramework.dll
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\EntityFramework.xml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.csproj.AssemblyReference.cache
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Dictionaries\Dictionary.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\CarUC.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\HomePageUC.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\MainWindow.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\App.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9_MarkupCompile.cache
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9_MarkupCompile.lref
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\App.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\CarUC.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\HomePageUC.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\MainWindow.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.g.resources
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.Properties.Resources.resources
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.csproj.GenerateResource.cache
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.csproj.CoreCompileInputs.cache
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.csproj.CopyComplete
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.exe
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\ADO.NET_Task9.pdb
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\NoResultUC.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\ADO.NET_Task9\obj\Debug\Domain\Views\NoResultUC.baml

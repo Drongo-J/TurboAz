@@ -30,6 +30,7 @@ namespace ADO.NET_Task9
             var homePage = new HomePageUC();
             var homePageViewModel = new HomePageUCViewModel();
             homePage.DataContext = homePageViewModel;
+            homePageViewModel.ShowCommand.Execute(null);
             MyGrid.Children.Add(homePage);
         }
     }

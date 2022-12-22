@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -88,7 +89,6 @@
     <Compile Include="DataAccess\Database.cs" />
     <Compile Include="Domain\Command\RelayCommand.cs" />
     <Compile Include="Domain\Helpers\Constants.cs" />
-    <Compile Include="Domain\Helpers\ImageHelpers.cs" />
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\CarUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\HomePageUCViewModel.cs" />
@@ -102,8 +102,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Domain\Views\NoResultUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Views\NoResultUC.xaml.cs">
+      <DependentUpon>NoResultUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -136,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Domain\Images\favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Domain\Images\carImage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Domain\Images\noresult.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
